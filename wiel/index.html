@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giuliano Wiel</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="wheelicon.ico">
+    <script src="https://kit.fontawesome.com/afd6e836dd.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="navbar">
+        <i class="fa-solid fa-clover"></i>
+        SPINNEN
+        <i class="fa-solid fa-clover"></i>
+    </div>
+    <div class="popupdiv" id="popupdiv">
+        <div class="popup" id="popup"></div>
+        <button class="button" id="winnerbutton" onclick="continuee()">Ga verder</button>
+    </div>
+    <div class="content">
+        <div class="wheel-elements">
+            <i class="fa-solid fa-arrow-down-long" id="arrow"></i>
+            <div id="wheel" onclick="spin()"></div>
+            <div class="slidecontainer">
+                <input type="range" min="1" max="20" value="20" class="slider" id="slider" oninput="rangeValue.innerText = this.value+' sec'">
+                <p id="rangeValue">20 sec</p>
+            </div>
+        </div>
+        <textarea id="input" class="input" rows="10" cols="20" onkeyup="submit()" onkeydown="submit()">Hugo
+Sergio
+Simon
+Jesse</textarea>
+    </div>
+    <script src="confetti.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,175 @@
+body {  
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    min-height: 700px;
+
+    font-family: monospace;
+}
+
+p {
+    background-color: blue;
+    color: white;
+    padding: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    height: 60px;
+    width: 100%;
+    margin: 0;
+
+    background-color: rgb(21, 0, 90);
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    box-shadow: 2px 0px 10px black;
+}
+
+.popupdiv {
+    position: absolute;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+#popup {
+    height: 30%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(169, 169, 169, 0.795);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    opacity: 1;
+    font-size: 48px;
+    font-weight: bold;
+    color: white;
+}
+
+#winnerbutton {
+    width: 50%;
+    height: 4rem;
+    font-size: 28px;
+    color: white;
+    background-color: blue;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border: 0;
+}
+
+#winnerbutton:hover {
+    background: darkblue;
+}
+
+@media (orientation: landscape) {
+    .wheel-elements {
+        height: 100%;
+        width: 60%;
+    }
+
+    .input {
+        height: 80%;
+        width: 20%;
+    }
+}
+
+@media (orientation: portrait) {
+    .content {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .wheel-elements {
+        height: 60%;
+        width: 100%;
+    }
+
+    .input {
+        height: 20%;
+        width: 80%;
+    }
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    width: 100vw;
+    min-height: 500px;
+}
+
+.wheel-elements {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 30px;
+    font-size: 30px;
+    color: blue;
+}
+
+#wheel {
+    border-radius: 50%;
+    height: 65%;
+    aspect-ratio: 1;
+
+    font-size: 28px;
+    transform-origin: center;
+
+    background-color: blue;
+}
+
+#wheel:hover {
+    opacity: 0.8;
+}
+
+.slidecontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#slider {
+    width: 300px;
+    margin: 10px;
+}
+
+.input {
+    margin: 20px;
+    font-size: 16px;
+}
+
+.winner {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: blue;
+    height: 5%;
+    border-radius: 10px;
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    margin-left: 20%;
+    margin-right: 20%;
+}

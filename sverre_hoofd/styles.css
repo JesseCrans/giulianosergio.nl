@@ -1,0 +1,65 @@
+body {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    height: 90vh;
+    width: 100vw;
+
+    min-height: 500px;
+    min-width: 600px;
+
+    background-image: url(Cards/backgroundPattern.png);
+    background-size: 500px;
+}
+
+@media (orientation: landscape) {
+    #board {
+        height: 80%;
+        aspect-ratio: 1;
+    }
+
+    #do {
+        height: 80%;
+        width: 30%;
+    }
+}
+
+@media (orientation: portrait) {
+    body {
+        flex-direction: column;
+    }
+
+    #board {
+        height: 50%;
+        aspect-ratio: 1;
+    }
+
+    #do {
+        height: 30%;
+        width: 70%;
+    }
+}
+
+#board {
+    padding: 20px;
+    background-color: darkgreen;
+    border: 3px solid black;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    
+    border-radius: 10%;
+    box-shadow: 2px 2px 5px black;
+}
+
+#do {
+    border: 3px solid black;
+    padding: 1rem;
+    background-color: rgb(255, 228, 194);
+    font-size: 32px;
+}
