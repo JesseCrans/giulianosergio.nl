@@ -6,7 +6,7 @@ body {
     justify-content: center;
     align-items: center;
     font-family: monospace;
-    background-color: rgb(202, 235, 163);
+    background-color: rgb(255, 255, 255);
 }
 
 .navbar {
@@ -23,7 +23,7 @@ body {
     padding-left: 5%;
     padding-right: 5%;
 
-    background-color: rgb(0, 134, 0);
+    background-color: rgb(0, 0, 0);
     color: white;
     font-size: 28px;
     font-weight: bold;
@@ -43,30 +43,18 @@ body {
     color: black;
 }
 
-p {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    background-color: green;
-    padding: 10%;
-    border-radius: 10px;
-    box-shadow: 2px 2px 5px black;
-    text-decoration: none;
-    color: black;
-}
-
-p:hover {
-    background-color: darkgreen;
-}
-
 a {
-    height: 5em;
-    width: 5em;
+    display: block;
     text-decoration: none;
-    color: black;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 5%;
+    margin: 5%;
+    border-radius: 10px;
+    box-shadow: 2px 0px 10px black;
 }
 
 a:hover {
-    color: rgb(70, 70, 70);
+    background-color: rgb(67, 67, 67);
+    color: white;
 }

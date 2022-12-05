@@ -36,7 +36,7 @@ a:hover {
     padding-left: 5%;
     padding-right: 5%;
 
-    background-color: rgb(21, 0, 90);
+    background-color: rgb(0, 0, 0);
     color: white;
     font-size: 28px;
     font-weight: bold;
@@ -104,7 +104,7 @@ a:hover {
     }
 
     .wheel-elements {
-        height: 60%;
+        height: 70%;
         width: 100%;
     }
 
