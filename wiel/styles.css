@@ -16,20 +16,32 @@ p {
     border-radius: 10px;
 }
 
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: lightgray;
+}
+
 .navbar {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 
     height: 60px;
-    width: 100%;
+    width: 90%;
     margin: 0;
+    padding-left: 5%;
+    padding-right: 5%;
 
     background-color: rgb(21, 0, 90);
     color: white;
     font-size: 28px;
     font-weight: bold;
     box-shadow: 2px 0px 10px black;
+    text-decoration: none;
 }
 
 .popupdiv {

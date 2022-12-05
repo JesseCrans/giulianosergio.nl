@@ -28,7 +28,6 @@ function updateText() {
   textDiv.innerHTML = 
     `${cards[cardTurned.value]} ${suits[cardTurned.suit]}: `;
   textDiv.innerHTML += opdrachten[cardTurned.value];
-  
 }
 
 class Card {
@@ -46,9 +45,12 @@ class Card {
 
     this.style();
     this.calcPos();
-    this.flip();
 
-    this.div.onclick = this.flip.bind(this)
+    this.flippable = true;
+    this.flip();
+    this.flippable = true;
+
+    this.div.onclick = this.flipUpdate.bind(this)
   }
 
   calcPos() {
@@ -70,13 +72,21 @@ class Card {
   }
 
   flip() {
-    if (this.flipped == true) {
-      this.div.style.backgroundImage = "url(Cards/cardBack_blue5.png)";
-      this.flipped = false;
-    } else {
-      this.div.style.backgroundImage = `url(Cards/${this.cardName})`;
-      this.flipped = true;
-    }
+    if (this.flippable) {
+      if (this.flipped == true) {
+        this.div.style.backgroundImage = "url(Cards/cardBack_blue5.png)";
+        this.flipped = false;
+      } else {
+        this.div.style.backgroundImage = `url(Cards/${this.cardName})`;
+        this.flipped = true;
+      }
+  
+      this.flippable = false;
+    };
+  }
+
+  flipUpdate() {
+    this.flip()
 
     cardTurned = this;
     updateText();
@@ -155,11 +165,24 @@ function makeHead() {
 makeDeck();
 makeHead();
 
+function randomNoRepeats(array) {
+  let copy = array.slice(0);
+  return function() {
+    if (copy.length < 1) { copy = array.slice(0); }
+    let index = Math.floor(Math.random() * copy.length);
+    let item = copy[index];
+    copy.splice(index, 1);
+    return item;
+  };
+}
+
 let i = 0
+let randomOrder = randomNoRepeats(headPos)
 for (const card of deck) {
-  card.row = headPos[i][0];
-  card.col = headPos[i][1]+1;
-  card.rotation = headPos[i][2];
+  let pos = randomOrder();
+  card.row = pos[0];
+  card.col = pos[1]+1;
+  card.rotation = pos[2];
   card.calcPos();
   i++;
 }
@@ -171,5 +194,6 @@ window.onresize = function() {
   for (const card of deck) {
     card.style();
     card.calcPos();
+    card.flipped = false;
   };
 };

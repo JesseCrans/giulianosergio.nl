@@ -1,8 +1,4 @@
 body {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-
     height: 90vh;
     width: 100vw;
 
@@ -11,6 +7,44 @@ body {
 
     background-image: url(Cards/backgroundPattern.png);
     background-size: 500px;
+    font-family: monospace;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);   
+}
+
+a:hover {
+    color: lightgray;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: absolute;
+    height: 60px;
+    width: 90%;
+    padding-left: 5%;
+    padding-right: 5%;
+    top: 0;
+    left: 0;
+    margin: 0;
+    background: black;
+    color: white;
+    font-size: 32px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    height: 100%;
+    width: 100%;
+    margin-top: 60px;
 }
 
 @media (orientation: landscape) {
@@ -26,7 +60,7 @@ body {
 }
 
 @media (orientation: portrait) {
-    body {
+    .content {
         flex-direction: column;
     }
 
@@ -58,6 +92,10 @@ body {
 }
 
 #do {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
     border: 3px solid black;
     padding: 1rem;
     background-color: rgb(255, 228, 194);
